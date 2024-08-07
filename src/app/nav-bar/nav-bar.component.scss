@@ -1,0 +1,117 @@
+.main-container{
+    display: none;
+    .a-img{
+        width: 10%;
+    }
+    .link-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+        a{
+            font-size: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    a:hover{
+        color: rgb(44, 136, 255);
+    }
+
+}
+.mobile-container{
+    display: flex;
+    justify-content: end;
+    span{
+        font-size: 34px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+img{
+    width: 100%;
+    margin-left: 40px;
+    display: block;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    animation: 1s moveRight;
+    align-items: center;
+    img{
+        width: 50%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .a-img-menu{
+        justify-content: center;
+    }
+    a{
+        display: flex;
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        font-size: 18px;
+        width: 85%;
+        color: black;
+        min-height: 35px;
+        align-items: center;
+    }
+    .menu-icons{
+        display: flex;
+        justify-content: space-around;
+        max-width: 80%;
+        min-width: 60%;
+        margin-top: 30px;
+        a{
+            border: none;
+            font-size: 30px;
+            width: 30px;
+        }
+    }
+}
+.noShow{
+    display: none;
+}
+
+@keyframes moveRight {
+    from{
+        transform: translateX(-300px);
+    }to{
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .menu-container{
+        width: 40%;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .main-container{
+        display: flex;
+    }
+    .mobile-container{
+        display: none;
+    }
+}

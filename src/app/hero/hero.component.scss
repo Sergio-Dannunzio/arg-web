@@ -1,0 +1,77 @@
+.parallax__bg{
+    --parallax-speed: 1.8;
+    z-index: 4;
+}
+
+.a{
+    position: relative;
+    z-index: 11; 
+}
+
+  .parallax {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-areas: "stack";
+  }
+  
+  .parallax > * {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+  }
+  
+  .parallax > img {
+    width: 100%;
+    max-height: 100vh;
+  }
+
+  .hero {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__title{
+    font-size: 18px;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 900;
+    position: relative;
+    text-align: center;
+    z-index: -2;
+
+    > span {
+      font-style: normal;
+      font-size: 22px;
+      display: block;
+    }
+  }
+  
+  @keyframes parallax {
+    from{
+      transform: scale(1);
+    }
+    to {
+      transform: 
+        scale(calc(var(--parallax-speed)));
+    }
+  }
+
+@media only screen and (min-width: 1024px) {
+
+  .hero__title{
+    font-size: 28px;
+
+    > span {
+      font-size: 34px;
+    }
+  }
+
+  .parallax__bg{
+    content:url("../../assets/deskHero.jpg");
+  }
+
+}
+  

@@ -1,0 +1,70 @@
+<div class="main-container">
+    <div class="card-description">
+        <li>¿QUE VISITAR EN ARGENTINA?</li>
+        <h1>{{descArray[first]}}</h1>
+        <span>
+            <span class="material-symbols-outlined location">
+                location_on
+            </span>UBICACIÓN
+        </span>
+        <p>{{ubArray[first]}}</p>
+    </div>
+    <div [ngStyle]="{'background-image': 'url(' + urlArray[first] + ')'}" class="card-container desktop">
+        <div class="card-list">
+            <div class="card first">
+                <img src="{{ urlArray[first]}}" alt="">
+            </div>
+            <div class="card second">
+                <img src="{{ urlArray[second]}}" alt="">
+            </div>
+            <div class="card third">
+                <img src="{{ urlArray[third]}}" alt="">
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="button-3d" (click)="changePageBack()">
+              <div class="button-top">
+                <span class="material-icons">❮</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+            <button class="button-3d" (click)="changePage()">
+              <div class="button-top">
+                <span class="material-icons" >❯</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+          </div>
+    </div>
+    <div [ngStyle]="{'background-image': 'url(' + urlArray[second] + ')'}" class="card-container mobile">
+      <div class="card-list">
+          <div class="card first">
+              <img src="{{ urlArray[first]}}" alt="">
+          </div>
+          <div class="card second">
+              <img src="{{ urlArray[second]}}" alt="">
+          </div>
+          <div class="card third">
+              <img src="{{ urlArray[third]}}" alt="">
+          </div>
+      </div>
+      <div class="button-container">
+          <button class="button-3d" (click)="changePageBack()">
+            <div class="button-top">
+              <span class="material-icons">❮</span>
+            </div>
+            <div class="button-bottom"></div>
+            <div class="button-base"></div>
+          </button>
+          <button class="button-3d" (click)="changePage()">
+            <div class="button-top">
+              <span class="material-icons" >❯</span>
+            </div>
+            <div class="button-bottom"></div>
+            <div class="button-base"></div>
+          </button>
+        </div>
+  </div>
+</div>
